@@ -21,9 +21,9 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       - name: Save Python version
-        run: echo ${{ matrix.python-version }} >> artifacts/artifacts.txt
+        run: echo ${{ matrix.python-version }} > artifacts/${{ matrix.python-version }}.txt
       - name: Save artifacts
         uses: actions/upload-artifact@v3
         with:
           name: py-artifact
-          path: artifacts/artifacts.txt
+          path: artifacts/${{ matrix.python-version }}.txt
