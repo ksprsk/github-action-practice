@@ -19,7 +19,7 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       - name: Make dir
-      - run: mkdir -p artifacts
+        run: mkdir -p artifacts
       - name: Save artifacts
       - uses: actions/upload-artifact@v3
         with:
