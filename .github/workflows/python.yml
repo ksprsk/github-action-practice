@@ -21,7 +21,7 @@ jobs:
       - name: Make dir
         run: mkdir -p artifacts
       - name: Save artifacts
-      - uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: py-artifact
           path: artifacts/artifacts.txt
